@@ -29,6 +29,13 @@
             width:100%;
             background-color: var(--color-grey-light-3);
         }
+
+        //makes the placeholder colour lighter
+        //and then it will change to a darker colour when typing
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
     }
     
     //get the adjacent with +
