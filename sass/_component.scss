@@ -1,3 +1,6 @@
+//nested flexbox
+//header is a flex container, then navbar is a flex container, and then the icon box is a flex container as well
+
 .logo{
     height: 3.25rem;
     margin-left:3rem;
@@ -7,6 +10,7 @@
     //take up 40% of the header
     flex: 0 0 40%;
     //turn the flex item into a flex container of its own
+    //2nd layer
     display:flex;
     //align its items centered (its items = the bitton)
     align-items: center;
@@ -62,18 +66,47 @@
 }
 
 .user-nav{
-    background-color: greenyellow ;
-    &__icon-box{
+    //2nd layer of flex: navigation
+    display:flex;
+    align-items: center;
+    align-self:stretch;
+    //select user nav's direct children
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height:100%;
+        //center items 3rd level of flex: icon box 
+        display:flex;
+        align-items: center;
+    }
 
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__icon-box{
+        position:relative;
     }
 
     &__icon{
         height:2.25rem;
         width:2.25rem;
+        fill: var(--color-grey-dark-2);
     }
 
     &__notification{
-        
+        font-size: 0.8rem;    
+        height:1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: #fff;
+        position:absolute;
+        top: 1.5rem;
+        right:1.1rem;
+        display:flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__user{
