@@ -354,3 +354,33 @@
 }
 
 //recommend
+.recommend{
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+    display:flex;
+    //vetically align items
+    align-items:center;
+
+
+    &__photo{
+        //reset box sizing so that the border is added to set pixel size
+        box-sizing: content-box;
+        height:4rem;
+        width:4rem;
+        border-radius: 50%;
+        border:3px solid white;
+        &:not(:last-child){
+            margin-right: -1.5rem;
+        }
+    }
+
+
+    &__count{
+        //pushes the pictures to the right side
+        margin-right: auto;
+    }
+
+    &__friends{
+
+    }
+}
