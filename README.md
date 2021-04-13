@@ -5,3 +5,5 @@ This website was made by following an advanced CSS and SASS course on Udemy. Thi
 - Using justify-content and align-items as an easy way to center items 
 - Using nested flex-containers to get the desired design 
 - Effectively using SVG icons for design 
+
+The live link for the project can be found here: https://catherinestirk97.github.io/trillo-website/
