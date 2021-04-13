@@ -15,6 +15,15 @@
     //align its items centered (its items = the bitton)
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width:$bp-smallest){
+        //on smallest screens, make the search bar the last thing in the top bar
+        order:1;
+        //on smallest screens, because of flex wrap, the search bar will take up a new row
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+
     &__input{
         font-family: inherit;
         font-size: inherit;
